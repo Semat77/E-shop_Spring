@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
-    @GetMapping(path="/hello", produces="text/plain")
-    @ResponseBody
-    public String hello() {
-        return "Hello world";
+
+    @GetMapping("/shop")
+    public String executeScript() {
+        return "shop_exe";
     }
+
 }
