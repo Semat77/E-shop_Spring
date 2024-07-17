@@ -5,8 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-    @GetMapping("/shop")
+
+    @GetMapping("/")
     public String executeScript() {
-        return "index";
+        return "home";
     }
 }
