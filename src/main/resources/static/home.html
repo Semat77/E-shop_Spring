@@ -4,7 +4,7 @@
     <title>Title</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
-        function pobierz() {
+        function download() {
             $.getJSON("/rest/products", function(data) {
                 data.forEach((product) => {
                     $("#produkty").append("<p> " + product.productName + " za cenę " + product.price + "</p>")
@@ -13,13 +13,13 @@
         }
 
         $(document).ready(function() {
-            $("#guzik").on("click", pobierz);
+            $("#guzik").on("click", download);
         });
     </script>
 </head>
 <body>
 <h1>Stronka ze skryptem</h1>
-<div><button id="guzik">Pobierz produkty</button></div>
-<div id="produkty"></div>
+<div><button id="button">Pobierz produkty</button></div>
+<div id="products"></div>
 </body>
 </html>
