@@ -7,13 +7,13 @@
         function download() {
             $.getJSON("/rest/products", function(data) {
                 data.forEach((product) => {
-                    $("#produkty").append("<p> " + product.productName + " za cenę " + product.price + "</p>")
+                    $("#products").append("<p> " + product.productName + " za cenę " + product.price + "</p>");
                 });
             });
         }
 
         $(document).ready(function() {
-            $("#guzik").on("click", download);
+            $("#button").on("click", download);
         });
     </script>
 </head>

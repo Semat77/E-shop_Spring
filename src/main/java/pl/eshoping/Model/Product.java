@@ -1,13 +1,11 @@
 package pl.eshoping.Model;
 
-
-import jakarta.persistence.*;
+import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "products")
-@NamedQuery(name="Product.findAll", query="SELECT p FROM Product p ORDER BY p.id")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +24,7 @@ public class Product {
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
+    // Getters and setters
     public Long getId() {
         return id;
     }
